@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('/fonts/NotoSansKR-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('/fonts/DelaGothicOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Jacques Francois';
+  src: url('/fonts/JacquesFrancois-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Gowun Dodum';
+  src: url('/fonts/GowunDodum-Regular.ttf');
+}
