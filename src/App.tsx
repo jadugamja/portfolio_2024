@@ -4,7 +4,7 @@ import Profile from './sections/Profile';
 
 export default function App() {
   return (
-    <div className="init">
+    <div className="init bg-noise-texture">
       <Header />
       <Intro />
       <Profile />

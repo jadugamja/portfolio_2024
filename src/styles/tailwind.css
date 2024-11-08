@@ -10,6 +10,10 @@
     @apply w-full min-h-dvh flex flex-col justify-center items-start bg-primary-back text-primary-fore;
   }
 
+  .bg-noise-texture {
+    @apply after:bg-[url(/images/noise.png)] after:absolute after:inset-0 after:bg-auto after:bg-center;
+  }
+
   .flex-center-center {
     @apply flex items-center justify-center;
   }
