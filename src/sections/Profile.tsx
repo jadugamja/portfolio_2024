@@ -1,6 +1,6 @@
-import TechStack from '../components/ui/TechStack';
-import { IoIosMail } from 'react-icons/io';
+import TechStack from '@/components/ui/TechStack';
 import { FaGithub } from 'react-icons/fa';
+import { IoIosMail } from 'react-icons/io';
 
 const skills = [
   { name: 'Next', bgColor: '#585858' },
@@ -46,13 +46,19 @@ const Profile = () => {
             Find Me Here
           </h3>
           <div className="flex flex-col gap-y-2">
-            <a className="flex items-center gap-x-[0.625rem]">
+            <a
+              href="mailto:gheedong2@gmail.com"
+              className="flex items-center gap-x-[0.625rem]"
+            >
               <IoIosMail fontSize="1.75rem" />
               <span className="text-xl font-extralight tracking-wider">
                 gheedong2@gmail.com
               </span>
             </a>
-            <a className="flex items-center gap-x-[0.625rem]">
+            <a
+              href="https://github.com/jadugamja"
+              className="flex items-center gap-x-[0.625rem] w-fit"
+            >
               <FaGithub fontSize="1.625rem" />
               <span className="text-xl font-extralight tracking-wider">
                 github.com/jadugamja
