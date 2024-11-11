@@ -1,34 +1,45 @@
 # workflow name
-name: Deploy
+name: Deploy static content to Page
 
 # condition to trigger the workflow
 on:
+  # 기본 브랜치에 대한 push 이벤트 발생 시 실행
   push:
-    branches:
-      ["test"]
+    branches: ["main"]
+
+  workflow_dispatch:
+
+# authority
+# GITHUB_TOKEN의 권한을 설정하여 Github Pages에 배포
+permissions:
+  contents: read
+  pages: write
+  id_token: write
+
+# 동시에 하나의 배포만 허용
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
-    # execution environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+      # execution environment
     runs-on: ubuntu-latest
-    # authority
-    permissions:
-      contents: read
-      packages: write
-      actions: write
-    concurrency:
-      group: ${{ github.workflow }}
-      cancel-in-progress: true
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
-      
+          node-version: '20'
+          cache: 'npm'
+
       - name: Cache node_modules
         id: cache
         uses: actions/cache@v2
@@ -47,3 +58,16 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+    
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # dist 디렉토리 업로드
+          patg: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
