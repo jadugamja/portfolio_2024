@@ -1,16 +1,24 @@
+import { cn } from '@/utils/helper';
 import React from 'react';
+
+type TechStackProps = {
+  bgColor?: string;
+  color?: string;
+  className?: string;
+  children: React.ReactNode;
+};
 
 const TechStack = ({
   bgColor,
   color = '#fff',
+  className,
   children
-}: {
-  bgColor?: string;
-  color?: string;
-  children: React.ReactNode;
-}) => (
+}: TechStackProps) => (
   <div
-    className="flex-center-center w-fit p-[0.438rem_0.75rem] font-bold"
+    className={cn(
+      'flex-center-center w-fit p-[0.438rem_0.75rem] font-bold',
+      className
+    )}
     style={{ backgroundColor: bgColor, color }}
   >
     {children}

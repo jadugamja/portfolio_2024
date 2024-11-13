@@ -1,13 +1,15 @@
 import Header from './components/layout/Header';
 import Intro from './sections/Intro';
 import Profile from './sections/Profile';
+import ProjectList from './sections/ProjectList';
 
 export default function App() {
   return (
-    <div className="init bg-noise-texture">
+    <main className="init bg-noise-texture">
       <Header />
       <Intro />
       <Profile />
-    </div>
+      <ProjectList />
+    </main>
   );
 }
