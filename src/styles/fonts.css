@@ -22,3 +22,8 @@
   font-family: 'Gowun Dodum';
   src: url('/fonts/GowunDodum-Regular.woff2');
 }
+
+@font-face {
+  font-family: 'Actor';
+  src: url('/fonts/Actor-Regular.woff2');
+}

@@ -19,9 +19,9 @@ const config: Config = {
       'dela-gothic-one': ['Dela Gothic One', 'sans-serif'],
       'jacques-francois': ['Jacques Francois', 'sans-serif'],
       'jetbrains-mono': ['JetBrains Mono', 'monospace'],
-      'gowun-dodam': ['Gowun Dodum', 'sans-serif']
+      'gowun-dodam': ['Gowun Dodum', 'sans-serif'],
+      actor: ['Actor', 'sans-serif']
     }
-  },
-  plugins: []
+  }
 };
 export default config;
