@@ -7,13 +7,13 @@ import { IoIosMail } from 'react-icons/io';
 const skills = [
   { name: 'Next', bgColor: '#585858' },
   { name: 'JavaScript', bgColor: '#F7DF1E', color: '#1a1a1a' },
-  { name: 'TypeScript', bgColor: '#007ACC' },
+  { name: 'TypeScript', bgColor: '#0474BF' },
   { name: 'React', bgColor: '#61DAFB', color: '#1a1a1a' },
-  { name: 'TailwindCSS', bgColor: '#21AFBB' },
+  { name: 'TailwindCSS', bgColor: '#37BCC7', color: '#1a1a1a' },
   { name: 'Redux', bgColor: '#7F4DD1' },
   { name: 'React Query', bgColor: '#FF4154' },
   { name: 'Git', bgColor: '#F05032' },
-  { name: 'Zustand', bgColor: '#624522' }
+  { name: 'Zustand', bgColor: '#4C3E2E' }
 ];
 
 const Profile = forwardRef<
@@ -31,8 +31,8 @@ const Profile = forwardRef<
           <h2 className="text-[3.2rem] font-[350]">
             최적의 <span className="font-bold">사용자 경험</span>을 추구합니다.
           </h2>
-          <hr className="w-full h-[0.188rem] bg-neutral-5 my-3" />
-          <p className="text-xl font-extralight flex flex-col">
+          <hr className="w-full my-3" />
+          <p className="text-xl font-extralight flex flex-col px-1">
             개발자로서의 전문성{`·`}명확한 의사 전달{`·`}높은 품질을 위한
             끊임없는 검토라는 세 가지 가치를 추구하며, 이를 바탕으로 비즈니스의
             성공에 능동적으로 기여하는 개발자가 되고자 합니다.
@@ -92,7 +92,7 @@ const Profile = forwardRef<
               >
                 <IoIosMail fontSize="1.75rem" />
               </motion.span>
-              <span className="text-xl font-extralight tracking-wider">
+              <span className="text-xl font-extralight tracking-[0.2rem]">
                 gheedong2@gmail.com
               </span>
             </a>
@@ -106,7 +106,7 @@ const Profile = forwardRef<
               >
                 <FaGithub fontSize="1.625rem" />
               </motion.span>
-              <span className="text-xl font-extralight tracking-wider">
+              <span className="text-xl font-extralight tracking-[0.2rem]">
                 github.com/jadugamja
               </span>
             </a>

@@ -6,10 +6,7 @@ const Intro = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
     return (
       <section
-        className={cn(
-          'flex-col-center-center w-full min-h-dvh px-[7.125rem]',
-          className
-        )}
+        className={cn('flex-col-center-center w-full min-h-dvh', className)}
         ref={ref}
         {...props}
       >
@@ -18,7 +15,7 @@ const Intro = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
         </h1>
         <div className="relative flex flex-col items-end w-full -bottom-[12vh]">
           <hr className="w-[43.75rem] h-[0.063rem] bg-neutral-5" />
-          <p className="text-2xl mt-[0.625rem] tracking-wider">
+          <p className="text-2xl mt-[0.625rem] tracking-[0.42rem]">
             더 나은 사용자 경험을 향하여
           </p>
         </div>
