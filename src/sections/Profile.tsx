@@ -10,6 +10,7 @@ const skills = [
   { name: 'TypeScript', bgColor: '#0474BF' },
   { name: 'React', bgColor: '#61DAFB', color: '#1a1a1a' },
   { name: 'TailwindCSS', bgColor: '#37BCC7', color: '#1a1a1a' },
+  { name: 'Recoil', bgColor: '#0983FD' },
   { name: 'Redux', bgColor: '#7F4DD1' },
   { name: 'React Query', bgColor: '#FF4154' },
   { name: 'Git', bgColor: '#F05032' },
