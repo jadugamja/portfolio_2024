@@ -1,5 +1,6 @@
 image: node:16.5.0
 
+# pnpm 설치
 before_script:
   - npm install -g pnpm
 
@@ -11,12 +12,10 @@ pages:
         - pnpm-lock.yaml
       prefix: pnpm
     paths:
-      - pnpm install
-      - pnpm run build
-      - cp -a dist/. public/
+      - node_modules/
   script:
-    - npm install
-    - npm run build
+    - pnpm install
+    - pnpm run build
     - cp -a dist/. public/
   artifacts:
     paths:
