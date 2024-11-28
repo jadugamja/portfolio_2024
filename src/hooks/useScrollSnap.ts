@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 export const useScrollSnap = () => {
-  const [currSection, setCurreSection] = useState(0);
+  const [currSection, setCurrSection] = useState(0);
   const controls = useAnimation();
   let isScrolling = false;
 
@@ -17,7 +17,7 @@ export const useScrollSnap = () => {
             const index = Array.from(sections).indexOf(
               entry.target as HTMLElement
             );
-            setCurreSection(index);
+            setCurrSection(index);
           }
         });
       },
@@ -44,7 +44,10 @@ export const useScrollSnap = () => {
       controls
         .start({
           y: -targetPosition,
-          transition: { duration: 0.8, ease: 'easeInOut' }
+          transition: {
+            duration: 0.75,
+            ease: 'easeInOut'
+          }
         })
         .then(() => {
           isScrolling = false;
